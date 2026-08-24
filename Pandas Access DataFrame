@@ -1,0 +1,30 @@
+import pandas as pd
+
+data = {'Name': ['John', 'Alice', 'Bob', 'Eve', 'Charlie'], 
+        'Age': [25, 30, 22, 35, 28], 
+        'Gender': ['Male', 'Female', 'Male', 'Female', 'Male'], 
+        'Salary': [50000, 55000, 40000, 70000, 48000]}
+
+df = pd.DataFrame(data)
+# Display the entire DataFrame
+print(df)
+
+
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame( {'Name': [' RACHEL', 'Monica', 'Phoebe', 'Ross', 'Chandler', 'Joey'],
+
+'Age': [30, 35, 37, 33, 34, 30],
+
+'Salary': [100000, 93000, 88000, 120000, 94000, 95000],
+
+'JOB': ['DESIGNER', 'CHEF', 'MASUS', 'PALENTOLOGY',
+'IT', 'ARTIST']})
+
+salary_at_index_2= df.at[2, 'Salary'] # df.at [row,column]
+print(salary_at_index_2)
+
+df.set_index('JOB',inplace=True) # by default Flase hota hai
+# print(a)
+print(df)
